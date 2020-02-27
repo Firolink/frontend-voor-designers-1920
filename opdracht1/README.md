@@ -39,7 +39,7 @@ Hierna wilde ik niet dat de film verdween zodra hij in de box zat. Dus heb ik er
 
 ![html screen 5](docu/8.jpg "site 5")
 
-het enige probleem is dat je de film meerdere keren in de box kon doen en ik wilde eigenlijk dat je dat maar 1 keer kan doen.
+Het enige probleem is dat je de film meerdere keren in de box kon doen en ik wilde eigenlijk dat je dat maar 1 keer kan doen.
 
 Eerst heb ik het geprobeerd door het met een array te doen, maar dit werkte niet helemaal. Daarna heb ik nog een tijd met Sanne gezeten om het te proberen te fixen, en hij heeft het toen uiteindelijk werkend gekregen (heel erg bedankt!).
 
