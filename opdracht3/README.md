@@ -13,11 +13,11 @@ Mijn idee is om een carousel plugin en de Sortable plugin samen te gebruiken zod
 
 Ik Heb nu een film poster en de titel erboven vanuit de Json op de pagina gekregen.
 
-![html screen 1](docu3/1.jpg "versie 1")
+![html screen 1](docu3/2.jpg "versie 1")
 
 Nu heb ik met een array alle films met de titels eronder op de pagina gekregen. Het ging op zich wel vlot maar ik maakte hier wat foutjes waardoor alles een stuk moeilijker ging dan had gekunt maar het werkt nu!
 
-![html screen 2](docu3/2.jpg "versie 2")
+![html screen 2](docu3/3.jpg "versie 2")
 
 
 
