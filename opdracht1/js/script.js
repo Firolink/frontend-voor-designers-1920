@@ -22,6 +22,7 @@ listButton.addEventListener ('click', slideDown); // hier zorg ik dat ik de func
 
 var filmlijst = document.querySelector('.filmList');
 var mijnlijst = document.querySelector('.myList');
+var button = document.querySelector('button');
 
 new Sortable(filmlijst, {
    group: {
@@ -75,3 +76,9 @@ new Sortable(mijnlijst, {
 function slideDown () {
 
 }
+
+button.addEventListener('click', {
+  handleEvent: function (event) {
+    alert('Element clicked through handleEvent property!');
+  }
+});

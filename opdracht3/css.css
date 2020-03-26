@@ -1,46 +1,85 @@
 html {
-  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
 }
 
 body {
-  width: 800px;
-  margin: 0 auto;
+  background-color: #202020;
 }
 
-h1, h2 {
-  font-family: 'Montserrat', sans-serif;
-}
-
-/* header styles */
-
-h1 {
-  font-size: 4rem;
-  text-align: center;
-}
-
-header p {
-  font-size: 1.3rem;
-  font-weight: bold;
-  text-align: center;
-}
-
-/* section styles */
-
-section article {
-  width: 33%;
-  float: left;
-}
-
-section p {
-  margin: 5px 0;
-}
-
-section ul {
-  margin-top: 0;
-}
 
 h2 {
-  font-size: 2.5rem;
-  letter-spacing: -5px;
-  margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+main {
+    display: flex;
+
+}
+
+
+main article {
+    margin: 0 2em;
+
+}
+
+img {
+    height: 45em;
+}
+
+
+
+h2 {
+    font-size: 1em;
+    color: white;
+
+
+}
+
+button {
+  display: block;
+  margin: auto;
+  width: 6em;
+  height: 2em;
+  color: white;
+  background-color: grey;
+
+}
+
+.myList {
+    position: relative;
+    flex-wrap: wrap;
+    background-color: black;
+    width: 60%;
+    min-height: 6em;
+    margin: 0 auto;
+    padding: .5em;
+}
+
+.myList img {
+    height: auto;
+    width: 20em;
+}
+
+
+/* zero state */
+/* als .my:ist leeg is staat er met ::before een tekstje */
+.myList::before {
+    content: "Drag your movies here!";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 2.5%;
+
+    font-size: .5em;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    color: white;
+
+    transition: .25s;
+}
+
+.myList:empty::before {
+    top: calc(50% - .65em);
+    font-size: 1.3em;
 }
