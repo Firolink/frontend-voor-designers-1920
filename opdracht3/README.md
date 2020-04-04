@@ -1,8 +1,4 @@
-## vragen
-mijn vragen voor deze week:
-
-1. Ik begrijp niet helemaal hoe ik met een click event van een button iets anders kan laten bewegen. Ik snap niet echt waar ik moet beginnen.
-2. ook heb ik een vraagje over de films in de Json. Als ik hiervan een carousel wil maken moet ik dat dan coderen in de functie die de elementen voor die posters aanmaakt? want ik loop nu nog wel een beetje vast vaak als ik teveel aanpassingen wil maken aan de dingen die de json aanroept.
+Door verkeerd inplannen van mijn andere opleveringen heb ik niet veel verandering nuu, maar daar ga ik dit weekend mee verder.
 
 # frontend voor designers - opdracht 3: Een interactie uitwerken met externe data
 
