@@ -3,62 +3,235 @@ html {
 }
 
 body {
-  background-color: #202020;
+  background-image:url(img/milkyway.jpg);
+  margin: 0;
+  overflow: hidden;
+}
+
+body.beweeg .mylist {
+  transform:translateX(0%);
+   position: relative;
+
+}
+
+
+h1 {
+    color: white;
+    font-family: serif;
+    text-align: center;
+    font-size: 2em;
 }
 
 
 h2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-size: 1em;
+    text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
 
-
-main {
-    display: flex;
-
+.sliderTrack {
+    position: relative;
 }
 
 
-main article {
-    margin: 0 2em;
+/* Slider, Bron: Sanne */
+
+.slider {
+    position: relative;
+    background-color: #ffffff;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    perspective: 90em;
+    perspective-origin: center -15em;
+    transform-style: preserve-3d;
+    --carrouselHoek: 0deg;
 
 }
+
 
 img {
-    height: 45em;
+    width: 20em;
+    height: auto;
+    box-shadow: 5px 5px 5px #000000;
+    transform: scale(1);
+    transition: .25s;
+
+}
+
+img:hover {
+    transform: scale(1.2);
+     transition: .25s;
+}
+
+.slider li {
+    width: 12em;
+    position: absolute;
+    left: calc(50% - 6em);
+    top: 4.5em;
+    transition: .5s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 
 
 
-h2 {
+
+.slider li:nth-of-type(1) {
+
+    transform: rotatey(calc(0deg + var(--carrouselHoek))) translatez(21em) rotatey(calc(-0deg - var(--carrouselHoek)));
+}
+
+.slider li:nth-of-type(2) {
+    transform: rotatey(calc(60deg + var(--carrouselHoek)))
+
+        translatez(21em)
+        rotatey(calc(-60deg - var(--carrouselHoek)));
+}
+
+.slider li:nth-of-type(3) {
+    transform: rotatey(calc(120deg + var(--carrouselHoek))) translatez(21em) rotatey(calc(-120deg - var(--carrouselHoek)));
+}
+
+.slider li:nth-of-type(4) {
+    transform: rotatey(calc(180deg + var(--carrouselHoek))) translatez(21em) rotatey(calc(-180deg - var(--carrouselHoek)));
+}
+
+.slider li:nth-of-type(5) {
+    transform: rotatey(calc(240deg + var(--carrouselHoek))) translatez(21em) rotatey(calc(-240deg - var(--carrouselHoek)));
+}
+
+.slider li:nth-of-type(6) {
+    transform: rotatey(calc(300deg + var(--carrouselHoek))) translatez(21em) rotatey(calc(-300deg - var(--carrouselHoek)));
+}
+
+button#left {
+    left: 0;
+
+    border-radius: 0 .5em .5em 0;
+    transform-origin: left center;
+
+    position: absolute;
+    width: 1.25em;
+    height: 1em;
+    line-height: 1em;
+    top: 13.5rem;
+    margin: 0;
+    padding: 0;
+    font-size: 2.5em;
+    color: whitesmoke;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+    cursor: pointer;
+    user-select: none;
+    transform: translateZ(100em);
+}
+
+
+button#right {
+    right: 0;
+
+    border-radius: .5em 0 0 .5em;
+    transform-origin: right center;
+
+    position: absolute;
+    width: 1.25em;
+    height: 1em;
+    line-height: 1em;
+    top: 13.5rem;
+    margin: 0;
+    padding: 0;
+    font-size: 2.5em;
+    color: whitesmoke;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+    cursor: pointer;
+    user-select: none;
+    transform: translateZ(100em);
+}
+
+
+button#right:hover {
+    color:crimson;
+    transform: scale(1.1);
+}
+
+button#left:hover {
+    color:crimson;
+    transform: scale(1.1);
+}
+
+.listButton {
     font-size: 1em;
-    color: white;
+    height: 2.5em;
+    width: auto;
+    border-radius: 0px 0px 20px 0px;
+    border-style:none;
+    box-shadow: 2px 2px 2px #000000;
+    background-color: white;
+    font-family: 'Girassol', cursive;
+     transition: 0.2s;
+}
 
+.listbutton:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 2px #a10a0a;
+    transition: 0.2s;
 
 }
 
-button {
-  display: block;
-  margin: auto;
-  width: 6em;
-  height: 2em;
-  color: white;
-  background-color: grey;
 
+
+
+dl.details-container {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height:100%;
+    left:0;
+    top:0;
+    margin:0;
+    padding: 1em;
+    background: #FFA0A0A0;
+    opacity: 0;
+    transition: .5s;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
+
+li:hover dl.details-container{
+    opacity: 1;
+}
+
+
 
 .myList {
-    position: relative;
-    flex-wrap: wrap;
+    position: fixed;
+    display: flex;
+    flex-wrap:wrap;
     background-color: black;
-    width: 60%;
-    min-height: 6em;
-    margin: 0 auto;
+    width: 100%;
+    min-height: 15em;
+    margin: 30% auto;
     padding: .5em;
+    transition:1s;
+    transform:translateX(-250%);
 }
 
 .myList img {
     height: auto;
-    width: 20em;
+    width: 10em;
+    margin-left: 2.7em;
 }
 
 
@@ -66,13 +239,13 @@ button {
 /* als .my:ist leeg is staat er met ::before een tekstje */
 .myList::before {
     content: "Drag your movies here!";
-    position: absolute;
+    position: relative;
     width: 100%;
     left: 0;
     top: 2.5%;
 
     font-size: .5em;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Girassol', cursive;
     text-align: center;
     color: white;
 
@@ -83,3 +256,40 @@ button {
     top: calc(50% - .65em);
     font-size: 1.3em;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
